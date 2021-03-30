@@ -1,3 +1,4 @@
+//Anagrams are words that have the same characters in the same quantity. This means that two strings are anagrams if we can rearrange one to get the other.
 function isAnagram(word1, word2) {
   if (typeof word1 !== 'string' || typeof word2 !== 'string') {
     throw new Error('isAnagram requires two strings to be passed.')
