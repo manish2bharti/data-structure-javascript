@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Promise</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+  <script>
+    let dell = {
+      brand: 'dell',
+      hardisk: '2tb',
+      color:'black'
+    }
+    let buyLaptop = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(dell);
+      }, 2000)
+    })
+
+    let buyLaptop2 = fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+
+    let result1 = document.getElementById('result1');
+    // Ex: 01: With Promise
+    function fetch1(){
+      result1.innerText = "Fetching data...";
+      buyLaptop.then(res => {
+        result1.innerText = JSON.stringify(res);
+      })
+    }
+
+    // Ex: 2: With Async/Await
+    let result2 = document.getElementById('result2');
+
+    async function fetch2(){
+      result2.innerText = "Fetching data...";
+      let data = await buyLaptop;
+      result2.innerText = JSON.stringify(data);
+    }
+
+    // Ex: 3: With Fetch API
+    let result3 = document.getElementById('result3');
+    //promise
+    /* function fetch3(){
+      result3.innerText = "Fetching data...";
+      buyLaptop2.then(res => {
+        result3.innerText = JSON.stringify(res);
+      })
+    } */
+
+    //async-await
+    async function fetch3(){
+      result3.innerText = "Fetching data...";
+      let data = await buyLaptop2;
+      result3.innerText = JSON.stringify(data);
+    }
+  </script>
+</head>
+<body>
+<div class="col-md-12">
+  <div class="col-md-4">
+    <strong>Ex - 01 : With Promise</strong>
+    <hr />
+    <button class="btn btn-primary" onclick="fetch1()">
+      Buy Laptop
+    </button>
+    <hr />
+    <div id="result1">
+      Data
+    </div>
+  </div>
+  <div class="col-md-4">
+    <strong>Ex - 02 : With Async/Await</strong>
+    <hr />
+    <button class="btn btn-primary" onclick="fetch2()">
+      Buy Laptop
+    </button>
+    <hr />
+    <div id="result2">
+      Data
+    </div>
+  </div>
+  <div class="col-md-4">
+    <strong>Ex - 03 : With Fetch API</strong>
+    <hr />
+    <button class="btn btn-primary" onclick="fetch3()">
+      Buy Laptop
+    </button>
+    <hr />
+    <div id="result3">
+      Data
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
