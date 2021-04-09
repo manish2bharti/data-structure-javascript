@@ -1,4 +1,7 @@
 /* Sets */
+// The set data structure is kind of like an array except there is not duplicate items 
+// and the values are not in any particular order the typical use first set is to simple 
+// check for the presence of an item.
 
 function mySet() {
     // the var collection will hold the set
