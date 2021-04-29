@@ -12,7 +12,7 @@ class BinarySearchTree {
         this.root = new Node(rootValue);
     }
 
-     insert(currentNode, newValue) {
+    insert(currentNode, newValue) {
         if (currentNode === null) {
             currentNode = new Node(newValue);
         } else if (newValue < currentNode.val) {
@@ -37,7 +37,6 @@ class BinarySearchTree {
             this.preOrderPrint(currentNode.leftChild);
             this.preOrderPrint(currentNode.rightChild);
         }
-
     }
   
     inOrderPrint(currentNode) {
@@ -46,16 +45,14 @@ class BinarySearchTree {
             console.log(currentNode.val);
             this.inOrderPrint(currentNode.rightChild);
         }
-
     }
   
-  postOrderPrint(currentNode) {
+    postOrderPrint(currentNode) {
         if (currentNode !== null) {
             this.postOrderPrint(currentNode.leftChild);
             this.postOrderPrint(currentNode.rightChild);
             console.log(currentNode.val);
         }
-
     }
 
 }
@@ -69,9 +66,9 @@ BST.insertBST(2);
 BST.insertBST(8);
 BST.insertBST(12);
 
-console.log('----Pre----')
+console.log('----Pre----');
 BST.preOrderPrint(BST.root);
-console.log('---In-----')
+console.log('---In-----');
 BST.inOrderPrint(BST.root);
-console.log('----Post----')
+console.log('----Post----');
 BST.postOrderPrint(BST.root);
