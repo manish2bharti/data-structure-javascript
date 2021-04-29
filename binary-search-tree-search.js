@@ -31,16 +31,16 @@ class BinarySearchTree {
         this.insert(this.root, newValue);
     }
   
-    searchPrint(currentNode, key){
+    search(currentNode, key){
       if(currentNode !== null){
         //return null;
         if(currentNode.val === key){
           console.log(currentNode.val + ' found')
           return currentNode;
         }else if(currentNode.val < key){
-            return this.searchPrint(currentNode.rightChild, key);
+            return this.search(currentNode.rightChild, key);
         }else if(currentNode.val > key){
-            return this.searchPrint(currentNode.leftChild, key);
+            return this.search(currentNode.leftChild, key);
         } else{
           console.log(key + ' not found in tree')
           return null;
@@ -59,6 +59,6 @@ BST.insertBST(8);
 BST.insertBST(12);
 
 
-BST.searchPrint(BST.root, 4);
+BST.search(BST.root, 4);
 // Complexity of Search in Balanced BST - O(log n)
 // Complexity of Search in Regular BST - O(n)
