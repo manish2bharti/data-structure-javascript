@@ -72,3 +72,6 @@ console.log('---In-----');
 BST.inOrderPrint(BST.root);
 console.log('----Post----');
 BST.postOrderPrint(BST.root);
+
+// Worst Complexity of Insertion in Balanced BST(AVL) - O(log n)
+// Wprst Complexity of Insertion in Regular BST - O(n) [10,15,16,18]
