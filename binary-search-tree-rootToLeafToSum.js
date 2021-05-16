@@ -6,7 +6,21 @@ class Node {
     }
 
 }
-
+/**
+ 
+ * Given a binary tree and a sum, find if there is a path from root to leaf
+ * which sums to this sum.
+ * 
+ * Solution
+ * Keep going left and right and keep subtracting node value from sum.
+ * If leaf node is reached check if whatever sum is remaining same as leaf node data.
+ * 
+ * Time complexity is O(n) since all nodes are visited.
+ * 
+ * Test cases:
+ * Negative number, 0 and positive number
+ * Tree with 0, 1 or more nodes
+ */
 class BinarySearchTree {
     constructor(rootValue) {
         this.root = new Node(rootValue);
