@@ -6,7 +6,17 @@ class Node {
     }
 
 }
-
+/**
+ * Traversal in binary search tree.
+ *
+ * Pre Order: root, left, right
+ * In Order: left root right
+ * Post Order: left right root
+ * 
+ * Time complexity O(height of tree)
+ * Space complexity O(height of tree)
+ * 
+ */
 class BinarySearchTree {
     constructor(rootValue) {
         this.root = new Node(rootValue);
