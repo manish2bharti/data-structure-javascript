@@ -6,6 +6,12 @@ class Node {
    }
 
 }
+/**
+ * 
+ *  AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left and right 
+ *  subtrees cannot be more than one for all nodes.
+ * 
+ */
 
 class AVLTree {
    constructor(rootValue) {
@@ -60,7 +66,7 @@ class AVLTree {
       if(root == null){
           return new Node(data) 
       }
-      if(root.data <= data){
+      if(root.val <= data){
           root.right = this.insert(root.right,data);
       }
       else{
@@ -98,7 +104,7 @@ class AVLTree {
           return;
       }
       this.inOrder(root.left);
-      console.log(root.data + " ");
+      console.log(root.val + " ");
       this.inOrder(root.right);
    }
 
@@ -106,7 +112,7 @@ class AVLTree {
       if(root == null){
           return;
       }
-      console.log(root.data + " ");
+      console.log(root.val + " ");
       this.preOrder(root.left);
       this.preOrder(root.right);
    }
@@ -117,7 +123,7 @@ class AVLTree {
       }
       this.postOrder(root.left);
       this.postOrder(root.right);
-      console.log(root.data + " ");
+      console.log(root.val + " ");
    }
 }
 
