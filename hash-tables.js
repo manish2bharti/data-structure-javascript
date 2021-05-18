@@ -1,6 +1,3 @@
-const { application } = require("express");
-const { lookup } = require("mime-types");
-
 function HashTable(size) {
    this.buckets = Array(size);
    this.numBuckets = this.buckets.length;

@@ -97,6 +97,6 @@ setD.add("c");
 setD.add("a");  
 setD.add("d");  
 console.log(setD.values())
-setD.delete("a");
+setD.remove("a");
 console.log(setD.has("a"));
 console.log(setD.add("d"));
