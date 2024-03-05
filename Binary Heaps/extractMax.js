@@ -28,7 +28,7 @@
 //    - Keep looping and swapping until neither child is larger than the element.
 //    - Return the old root!
 
-class MaxBinaryHeap {
+class ExtractMapHeap {
   constructor() {
     this.values = [];
   }
@@ -94,7 +94,7 @@ class MaxBinaryHeap {
   }
 }
 
-let heap = new MaxBinaryHeap();
+let heap = new ExtractMapHeap();
 heap.insert(41);
 heap.insert(39);
 heap.insert(33);
